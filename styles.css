@@ -1,0 +1,67 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px;
+  background: #f5f5f5;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Part 1: CSS transitions + animations */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: #2ecc71;
+  transform: scale(1.1);
+}
+
+/* Animated box */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: #e74c3c;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+/* Box animation (keyframes) */
+.animate {
+  animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-40px); }
+}
+
+/* Popup styles */
+.popup {
+  width: 200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: none;
+}
+.show {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
